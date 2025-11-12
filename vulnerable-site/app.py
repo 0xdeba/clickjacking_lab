@@ -11,9 +11,10 @@ def home():
 # get session cookie
 @app.route('/login', methods=['POST'])
 def login():
-    session['user']='Demo'
-    session['account'] = random.randint(1000, 9999)
-    session['balance'] = random.randint(1111,9999)
+    if 'user' not in session:
+        session['user']='Demo'
+        session['account'] = random.randint(1000, 9999)
+        session['balance'] = random.randint(1111,9999)
     return redirect('/myaccount')
 
 @app.route('/myaccount', methods=['GET'])
