@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>My Account - Vulnerable Bank</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      background-color: #fff3f3;
+      color: #333;
+      text-align: center;
+    }
+    h1 {
+      color: #d9534f;
+    }
+    button {
+      width: 220px;
+      padding: 15px;
+      margin: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    }
+    .transfer {
+      background-color: #0275d8;
+    }
+    .delete {
+      background-color: #d9534f;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bank Account Page</h1>
+  <p><b>Account:</b> xxxx-xxxx-{{account}}</p>
+  <p><b>Balance:</b> ${{balance}}</p>
+<div>
+    <form action="/transfer" method="POST">
+    <button class="transfer" type="submit">Transfer $1000</button>
+  </form>
+  <form action="/delete" method="GET">
+    <button class="delete" type="submit">Delete Account</button>
+  </form>
+</div>
+</body>
+</html>
