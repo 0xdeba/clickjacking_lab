@@ -1,4 +1,4 @@
-# Clickjacking Lab (Edge, WSL)
+# Clickjacking Lab (Edge, WSL, Dockerized)
 
 ## Setup
 1. Use WSL.  
