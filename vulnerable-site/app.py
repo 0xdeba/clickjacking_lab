@@ -3,6 +3,11 @@ import random
 
 app = Flask(__name__)
 app.secret_key = "123"
+app.config.update(
+    SESSION_COOKIE_SAMESITE='Lax',
+    SESSION_COOKIE_SECURE=False,
+    SESSION_COOKIE_HTTPONLY=True,
+)
 
 @app.route('/', methods=["GET"])
 def home():
